@@ -6,7 +6,7 @@
 
 .wallet-btn {
   display: flex;
-  width: 140px;
+  width: fit-content;
   padding: 14px 52px 14px 47px;
   align-items: center;
   border-radius: 10px;
@@ -63,11 +63,98 @@
   stroke-width: 0px;
 }
 
+.scroll-card::-webkit-scrollbar {
+  display: none;
+}
+
+
+.hbc {
+  border-radius: 20px;
+
+
+  /* shadow */
+  box-shadow: 0px 83px 83px 0px rgba(110, 110, 110, 0.09), 0px 21px 46px 0px rgba(110, 110, 110, 0.10);
+}
+
+.ani-main {
+  position: relative;
+}
+
+.ani-coin {
+  position: absolute;
+  /* box-shadow: 86px 86px 34px 0px rgba(0, 0, 0, 0.00), 55px 55px 31px 0px rgba(0, 0, 0, 0.01), 31px 31px 26px 0px rgba(0, 0, 0, 0.05), 14px 14px 19px 0px rgba(0, 0, 0, 0.09), 3px 3px 11px 0px rgba(0, 0, 0, 0.10); */
+}
+
+.ani-coin-1 {
+  left: 5%;
+  background: transparent;
+  top: -32%;
+}
+
+.ani-coin-2 {
+  left: 17%;
+  background: transparent;
+  top: 5%;
+}
+
+.ani-coin-3 {
+  right: 17%;
+  background: transparent;
+  top: 5%;
+}
+
+.ani-coin-4 {
+  right: 12%;
+  background: transparent;
+  top: -12%;
+}
+
+.ani-coin-5 {
+  right: 5%;
+  top: -30%;
+}
+
+@media(width<1024px) {
+  .ani-coin-4 {
+    display: none;
+  }
+
+  .ani-coin-5 {
+    top: -35%;
+  }
+}
+
 @media(width<720px) {
   .wallet-btn {
     padding: 9px 30px;
     width: fit-content;
   }
+
+  .ani-coin-1 {
+    left: 2%;
+    background: transparent;
+    top: -32%;
+  }
+
+  .ani-coin-2 {
+    left: 7%;
+    background: transparent;
+    top: 5%;
+    scale: .6;
+  }
+
+  .ani-coin-3 {
+    right: 7%;
+    background: transparent;
+    top: 5%;
+    scale: .6;
+  }
+
+  .ani-coin-5 {
+    right: 5%;
+    top: -47%;
+  }
+
 }
 
 @media(width<540px) {
@@ -77,8 +164,54 @@
     min-width: 441px;
   }
 
+  .ani-coin-1 {
+    left: -5%;
+    background: transparent;
+    top: -68%;
+    scale: .7;
+  }
+
+  .ani-coin-2 {
+    left: 0%;
+    background: transparent;
+    top: 0%;
+    scale: .6;
+  }
+
+  .ani-coin-3 {
+    right: 0%;
+    background: transparent;
+    top: -4%;
+    scale: .6;
+  }
+
+  .ani-coin-5 {
+    right: -5%;
+    top: -94%;
+    scale: .8;
+
+  }
+
+  .hbc {
+    border-radius: 5.545px;
+    border: 0.277px solid #BCBCBC;
+    box-shadow: 0px 5.822px 12.752px 0px rgba(110, 110, 110, 0.10);
+  }
+
   .sidebar-outer {
     max-width: 100%;
     overflow-x: auto;
+  }
+}
+
+@media(width<420px) {
+  .ani-coin-1 {
+    left: -8%;
+    top: -81%;
+  }
+
+  .ani-coin-5 {
+    right: -8%;
+    top: -111%;
   }
 }

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { git, line, logo, maskgroup, maskgroup2, maskgroup3, menu, telegram, xicon } from "../assets";
 import { useDispatch, useSelector } from "react-redux";
 import { setNavOpen } from "../store/ui";
@@ -7,9 +7,10 @@ function Navbar() {
     const { navOpen } = useSelector((store) => store)
     console.log(navOpen)
     const dispatch = useDispatch();
+    const loc = useLocation();
     return (
         <>
-            <div className="lg:px-16 lg:py-7 py-4 md:px-8 px-4 h-15 flex justify-between items-center relative">
+            <div className={`lg:px-16 lg:py-7 py-4 md:px-8 px-4 h-15 flex justify-between items-center relative ${loc.pathname == "/" ? "bg-[#FCFCFC]" : "bg-white"}`}>
                 <div className="flex items-center">
                     <Link to={'/blog'}>
                         <div className="text-black md:text-2xl sm:text-[19px] text-[14px] font-normal font-lato">RunesBridge</div>
